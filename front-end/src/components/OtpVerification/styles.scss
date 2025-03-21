@@ -1,0 +1,122 @@
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    padding: 20px;
+
+    .otp-single-input {
+        width: 50px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+        border-radius: 8px;
+        border: 2px solid #ccc;
+        outline: none;
+        padding: 5px;
+        line-height: 50px;
+        vertical-align: middle;
+    }
+
+    .otp-box {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+            .otp-input {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                text-align: center;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                transition: border 0.3s;
+
+                &:focus {
+                    border-color: #6c63ff;
+                }
+            }
+
+            .otp-btn {
+                background: #6c63ff;
+                color: white;
+                border: none;
+                padding: 12px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+                max-width: 300px;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: #574bff;
+                }
+            }
+        }
+
+        .resend-btn {
+            background: none;
+            border: none;
+            color: green;
+            margin-top: 10px;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .otp-container {
+        padding: 10px;
+    }
+
+    .otp-box {
+        width: 90%;
+    }
+
+    .otp-input {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .otp-box {
+        padding: 20px;
+    }
+
+    .otp-input {
+        width: 40px;
+        height: 40px;
+    }
+}

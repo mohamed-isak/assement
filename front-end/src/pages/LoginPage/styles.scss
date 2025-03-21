@@ -1,0 +1,91 @@
+// SCSS Styling
+$primary-color: #6c5ce7;
+$error-color: #ff6b6b;
+
+// Flexbox Centering
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formHeader {
+    align-self: flex-start;
+}
+
+.login-form {
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .error {
+        color: $error-color;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.login-btn {
+    background: $primary-color;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+        background: darken($primary-color, 10%);
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

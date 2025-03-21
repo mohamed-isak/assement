@@ -1,0 +1,113 @@
+.forgot-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    padding: 20px;
+
+
+    .forgot-password-box {
+        padding: 30px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .option {
+                display: flex;
+                align-items: center;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                padding: 10px 0 10px 30px;
+                cursor: pointer;
+                transition: all 0.3s;
+                background: #fff;
+
+                input {
+                    display: none;
+                }
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 15px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: gray;
+                }
+
+                &:hover,
+                &.selected {
+                    border-color: #6c63ff;
+                    background: #f3f2ff;
+                }
+            }
+
+            .error {
+                color: red;
+                font-size: 12px;
+            }
+
+            .continue-btn {
+                background: #6c63ff;
+                color: white;
+                border: none;
+                padding: 12px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: #574bff;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .forgot-password-container {
+        padding: 10px;
+    }
+
+    .forgot-password-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .forgot-password-box {
+        padding: 20px;
+    }
+}
+
+.forgot-password-title {
+    align-self: flex-start;
+}
